@@ -25,3 +25,59 @@ print(b.pop())     # 마지막 값 꺼냄
 # 순서가있음
 # 중복허용
 # 수정 및 삭제는 안됨 (list와 다른 점)
+c=('1',2,(3,4))
+c1=1,2,3            # 튜플은 () 생략 가능
+c2=1,               # ,인 경우 튜플로 인식
+print(c1,type(c1))
+print(c2,type(c2))
+print(c.count('1'))   # 매칭되는 개수 반환
+print(c.index(2))       # 매칭되는 위치(*첫) 반환
+# *패킹과 언패킹
+# 패킹
+d1=('a','b','c','d')
+# 언패킹
+(x1,x2,x3,x4)=d1
+print((x1,type(x1)))
+
+# *dict {}
+# 순서가 없음
+# 키의 중복허용안함
+# 수정 및 삭제 허용
+e={'a':1,1:'b'}
+e1={
+    'Name':'Kangnam',
+    'Age':5
+}
+e2=dict(
+    name='abc',
+    year=5
+)
+print(e['a'],e[1])
+print(e1['Age'],e1['Name'])
+print(e2['name'])
+# 주요 함수 keys,values,items
+# pop, popitem
+# in, not in
+print(e1.get('Name'))   # key값 미존재시 에러가 아닌 None으로 나와서 안정적임
+print(e1.keys(),e1.values(),e1.items())
+print('5' in e1)                            # key 값 기준으로 값이 존재하는지 체크
+
+# sets
+# 순서가 없음
+# 중복 허용 안함
+# 추가 및 삭제 가능
+# 선언시 set + [] 사용하거나 {} 사용
+a=set()
+a=set([1,2,3,3])
+b={1,2,3,3}
+print(a,b,type(a),type(b),len(a))
+# 주요함수
+# 교집합 intersection(&)
+# 합집합 union (|)
+# 차집합 difference(-)
+# 교집합 여부 isdisjoint *dis가 붙으므로 false가 나오면 교집합이 존재함을의미
+# 부분집합 여부 issubset <> issuperset
+a={1,2,3,4,5}
+b={3,4,5,6,7}
+print(a.intersection(b),a|b,b.difference(a))
+print(a.isdisjoint(b),a.issubset(b),a.issuperset(b))
