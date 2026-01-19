@@ -1,1 +1,6 @@
-[{'product': '웹캠', 'total_price': 850000}, {'product': '노트북', 'total_price': 6000000}, {'product': '노트북', 'total_price': 9600000}, {'product': '노트북', 'total_price': 14400000}, {'product': '마우스', 'total_price': 525000}, {'product': '마우스', 'total_price': 1225000}, {'product': '마우스', 'total_price': 1855000}, {'product': 'USB메모리', 'total_price': 750000}, {'product': '키보드', 'total_price': 1068000}, {'product': '키보드', 'total_price': 1691000}, {'product': '태블릿', 'total_price': 3900000}, {'product': '모니터', 'total_price': 3600000}, {'product': '모니터', 'total_price': 5850000}, {'product': '헤드셋', 'total_price': 750000}, {'product': '스피커', 'total_price': 612000}]
+import requests
+
+url='https://cookbook.exemone.com/docs/%EB%A6%B4%EB%A6%AC%EC%A6%88%EB%85%B8%ED%8A%B8/%EC%A0%95%EA%B7%9C_%ED%8C%A8%ED%82%A4%EC%A7%80/ExemONE_Release_2509_%EB%A6%B4%EB%A6%AC%EC%A6%88_%EB%85%B8%ED%8A%B8'
+
+rs=requests.get(url=url)
+print(rs.text)
